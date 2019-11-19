@@ -1,0 +1,10 @@
+﻿drama, Joker
+horror,IT 2
+scifi,Star Wars: A New Hope
+animated,Up
+new Movie(horror,The Conjuring
+animated,Toy Story
+scifi,Fifth Element
+scifi,Interstellar
+drama,Casablanca
+horror,Dr. Slate
