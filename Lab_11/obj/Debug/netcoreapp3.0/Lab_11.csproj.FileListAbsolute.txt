@@ -9,3 +9,14 @@ C:\Users\Christian\source\repos\Lab_11\Lab_11\obj\Debug\netcoreapp3.0\Lab_11.Ass
 C:\Users\Christian\source\repos\Lab_11\Lab_11\obj\Debug\netcoreapp3.0\Lab_11.AssemblyInfo.cs
 C:\Users\Christian\source\repos\Lab_11\Lab_11\obj\Debug\netcoreapp3.0\Lab_11.dll
 C:\Users\Christian\source\repos\Lab_11\Lab_11\obj\Debug\netcoreapp3.0\Lab_11.pdb
+C:\Users\Christian\source\repos\GrandCircus\Lab_11\Lab_11\bin\Debug\netcoreapp3.0\Lab_11.exe
+C:\Users\Christian\source\repos\GrandCircus\Lab_11\Lab_11\bin\Debug\netcoreapp3.0\Lab_11.deps.json
+C:\Users\Christian\source\repos\GrandCircus\Lab_11\Lab_11\bin\Debug\netcoreapp3.0\Lab_11.runtimeconfig.json
+C:\Users\Christian\source\repos\GrandCircus\Lab_11\Lab_11\bin\Debug\netcoreapp3.0\Lab_11.runtimeconfig.dev.json
+C:\Users\Christian\source\repos\GrandCircus\Lab_11\Lab_11\bin\Debug\netcoreapp3.0\Lab_11.dll
+C:\Users\Christian\source\repos\GrandCircus\Lab_11\Lab_11\bin\Debug\netcoreapp3.0\Lab_11.pdb
+C:\Users\Christian\source\repos\GrandCircus\Lab_11\Lab_11\obj\Debug\netcoreapp3.0\Lab_11.csprojAssemblyReference.cache
+C:\Users\Christian\source\repos\GrandCircus\Lab_11\Lab_11\obj\Debug\netcoreapp3.0\Lab_11.AssemblyInfoInputs.cache
+C:\Users\Christian\source\repos\GrandCircus\Lab_11\Lab_11\obj\Debug\netcoreapp3.0\Lab_11.AssemblyInfo.cs
+C:\Users\Christian\source\repos\GrandCircus\Lab_11\Lab_11\obj\Debug\netcoreapp3.0\Lab_11.dll
+C:\Users\Christian\source\repos\GrandCircus\Lab_11\Lab_11\obj\Debug\netcoreapp3.0\Lab_11.pdb

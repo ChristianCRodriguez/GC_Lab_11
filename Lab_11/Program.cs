@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+
 namespace Lab_11
 {
     class Program
@@ -7,19 +8,8 @@ namespace Lab_11
         static void Main(string[] args)
         {
             //Creating list of movies
-            List<Movie> movieList = new List<Movie>()
-            {
-                {new Movie("drama", "Joker") },
-                {new Movie("horror","IT 2") },
-                {new Movie("scifi","Star Wars: A New Hope") },
-                {new Movie("animated","Up") },
-                {new Movie("horror","The Conjuring") },
-                {new Movie("animated","Toy Story") },
-                {new Movie("scifi","Fifth Element") },
-                {new Movie("scifi","Interstellar") },
-                {new Movie("drama","Casablanca") },
-                {new Movie("horror","Dr. Slate") }
-            };
+            List<Movie> movieList = Movie.GetMovieList();
+
             List<string> categoryList = new List<string>()
             {
                 "animated",
@@ -28,8 +18,6 @@ namespace Lab_11
                 "scifi"
             };
 
-
-            
             bool repeat = false;//creating bool to see if user wants to repeat
             
             Console.WriteLine("Welcome to the Movie List!\n\nThere are 10 movies in this list.\nWe have the following categories available to select from:");
@@ -41,7 +29,7 @@ namespace Lab_11
                 Console.Write("What category are you interested in?: ");
                 
                 //Modified ValidateCategory from Void to Int as before it was not returning the value that was set inside
-                int categoryID = ValidateCategory();
+                int categoryID = ValidateCategory(categoryList.Count);
 
                 //Added CategoryList to the signature to pull movies with the category selected
                 DisplayMovieList(movieList, categoryID, categoryList);
@@ -59,6 +47,7 @@ namespace Lab_11
             Console.WriteLine("Goodbye!");
         }
 
+        #region Methods
         public static void DisplayMovieList(List<Movie> movielist, int category, List<string> categorylist)
         {
             //writing movies to console that are in selected category
@@ -87,16 +76,48 @@ namespace Lab_11
             }
         }
 
-        public static int ValidateCategory()
+        public static int ValidateCategory(int countofCategories)
         {
             string category = Console.ReadLine();
-            //validating user input
-            while (category != "1" && category != "2" && category != "3" && category != "4")
+            int number = 0;
+            bool isValidInt = false;
+
+            while (isValidInt == false)
             {
-                Console.Write("\nThat category is not available, please select using the number next to the category: ");
-                category = Console.ReadLine();
+                try
+                {
+                    number = int.Parse(category);
+                    isValidInt = true;
+                }
+                catch (ArgumentNullException)
+                {
+                    Console.WriteLine("Null values not allowed, Please try again:");
+                    category = Console.ReadLine();
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Please enter a valid numerical number, Please try again:");
+                    category = Console.ReadLine();
+                }
+                catch (OverflowException)
+                {
+                    Console.WriteLine($"Number entered was too large, Please ener a smaller number:");
+                    category = Console.ReadLine();
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine($"There was an error with your input, Please try again:");
+                    category = Console.ReadLine();
+                }
+
+                if((number < 0 || number > countofCategories)  && isValidInt == true)
+                {
+                    isValidInt = false;
+                    Console.WriteLine("That category does not exist, please enter a category:");
+                    category = Console.ReadLine();
+                }
             }
-            return int.Parse(category);
+            return number;
         }
 
         public static void ValidateContinueApp(string input)
@@ -121,5 +142,6 @@ namespace Lab_11
                 return false;
             }
         }
+        #endregion
     }
 }

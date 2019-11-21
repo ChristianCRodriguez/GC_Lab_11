@@ -1,4 +1,4 @@
-﻿drama, Joker
+﻿drama,Joker
 horror,IT 2
 scifi,Star Wars: A New Hope
 animated,Up

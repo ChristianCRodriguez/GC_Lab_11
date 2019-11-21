@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.IO;
 
 namespace Lab_11
 {
@@ -24,6 +24,36 @@ namespace Lab_11
         {
             Category = category;
             Title = title;
+        }
+
+        public static List<Movie> GetMovieList()
+        {
+            List<Movie> movieList = new List<Movie>();
+
+            //Enter the path to the txt file here
+            StreamReader reader = new StreamReader(@"");
+
+            string data = reader.ReadLine();
+
+            while(data != null)
+            {
+                string[] movies = data.Split(',');
+
+                try
+                {
+                    movieList.Add(new Movie(movies[0],movies[1]));
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex);
+                }
+
+                data = reader.ReadLine();
+            }
+
+            reader.Close();
+
+            return movieList;
         }
 
     }
